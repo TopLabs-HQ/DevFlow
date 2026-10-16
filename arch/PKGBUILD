@@ -1,0 +1,23 @@
+# Installs the official DevFlow build (from the .deb on GitHub Releases) as a native Arch package.
+#   git clone https://github.com/SpyUT12/DevFlow && cd DevFlow/arch && makepkg -si
+pkgname=devflow-bin
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Notes, tasks and Git for developers, in one fast Linux app"
+arch=('x86_64')
+url="https://github.com/SpyUT12/DevFlow"
+license=('LicenseRef-DevFlow')
+depends=('webkit2gtk-4.1' 'gtk3' 'libsoup3' 'glib2' 'cairo' 'pango' 'gdk-pixbuf2' 'hicolor-icon-theme' 'git')
+optdepends=('gnome-keyring: remember the GitHub sign-in (any Secret Service provider works)'
+            'kwallet: Secret Service provider on KDE')
+provides=('devflow')
+conflicts=('devflow')
+options=('!strip' '!debug')
+source=("DevFlow_${pkgver}_amd64.deb::$url/releases/download/v$pkgver/DevFlow_${pkgver}_amd64.deb"
+        "LICENSE::https://raw.githubusercontent.com/SpyUT12/DevFlow/main/LICENSE")
+sha256sums=('SKIP' 'SKIP') # run `updpkgsums` when bumping pkgver
+
+package() {
+  bsdtar -xf "$srcdir/data.tar.gz" -C "$pkgdir"
+  install -Dm644 "$srcdir/LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}
