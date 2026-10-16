@@ -9,10 +9,10 @@ Your files stay plain Markdown on your disk. No account, no cloud, works offline
 
 | Your system | How |
 |---|---|
-| **Arch Linux** | `git clone https://github.com/SpyUT12/DevFlow && cd DevFlow/arch && makepkg -si` (installs the official build as a native package), or use the `.AppImage` |
-| **Debian / Ubuntu** | Download the `.deb` from [Releases](https://github.com/SpyUT12/DevFlow/releases), then `sudo apt install ./DevFlow_*.deb` |
-| **Fedora / openSUSE** | Download the `.rpm` from [Releases](https://github.com/SpyUT12/DevFlow/releases), then `sudo dnf install ./DevFlow-*.rpm` |
-| **Any other distro** | Download the `.AppImage` from [Releases](https://github.com/SpyUT12/DevFlow/releases), then `chmod +x DevFlow_*.AppImage` and run it |
+| **Arch Linux** | `git clone https://github.com/TopLabs-HQ/DevFlow && cd DevFlow/arch && makepkg -si` (installs the official build as a native package), or use the `.AppImage` |
+| **Debian / Ubuntu** | Download the `.deb` from [Releases](https://github.com/TopLabs-HQ/DevFlow/releases), then `sudo apt install ./DevFlow_*.deb` |
+| **Fedora / openSUSE** | Download the `.rpm` from [Releases](https://github.com/TopLabs-HQ/DevFlow/releases), then `sudo dnf install ./DevFlow-*.rpm` |
+| **Any other distro** | Download the `.AppImage` from [Releases](https://github.com/TopLabs-HQ/DevFlow/releases), then `chmod +x DevFlow_*.AppImage` and run it |
 
 DevFlow needs `git` installed for the Git features. To stay signed in to GitHub between sessions, you need a keyring such as GNOME Keyring or KWallet; most desktops already have one.
 
@@ -158,7 +158,7 @@ In the file tree, arrow keys move, `Enter` opens, `F2` renames and `Delete` move
 
 ## Feedback
 
-Found a bug or have an idea? Open an [issue](https://github.com/SpyUT12/DevFlow/issues).
+Found a bug or have an idea? Open an [issue](https://github.com/TopLabs-HQ/DevFlow/issues).
 
 ## License
 
